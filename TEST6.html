@@ -1,0 +1,75 @@
+<html>
+<title>Test6</title>
+<head></head>
+<style>
+	
+	fieldset{
+		border-color:grey;
+		margin-left:200px;
+		margin-right:200px;
+		background:linear-gradient(to right,pink,cyan);
+		}
+</style>
+
+<body align="center" bgColor="orange">
+  <form name="f" >
+	<fieldset>
+	  <legend>Fibonacci</legend>
+		<br>
+		Limit:<input type="text" name="l"><br><br>
+		<button type="button" name="b" style="background-color:yellow;color=blue;height=30px;border=20px solid #00ff00" onClick="calc()">Click me</button><br><br>
+	</fieldset>
+   </form>
+
+   <h1 id="h" onMouseOver="hover()">IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</h1>
+   
+
+	<div id="result" style="font-size:35px;color:#00aaff;text-shadow:2px 2px 2px blue;
+    border:3px groove blue;background-color:#aaffaa; width:600px; height:40px">>
+   </div>
+
+   <script language="JavaScript">
+	 
+	 a=1;
+	 b=1;
+	 p=0;
+	 x
+	function calc(){
+		
+		if(p==0)
+		{
+			document.getElementById("result").innerHTML=a+",";p++;
+			
+			setTimeout("calc()",1000);
+		}
+		else if(p==1){
+			d=document.getElementById("result").innerHTML;
+			document.getElementById("result").innerHTML=d+b+",";p++;
+			
+			
+			
+			setTimeout("calc()",1000);
+		}
+		else{
+		x=parseInt(document.f.l.value);
+		s=a+b;
+		a=b;
+		b=s;
+		if(s<x){
+			d=document.getElementById("result").innerHTML;
+			document.getElementById("result").innerHTML=d+c+",";
+			setTimeout("calc()",1000);
+		}	
+		
+		
+	}
+	
+	function hover(){
+		document.getElementById("h").style.fontSize="32"
+		document.getElementById("h").style.color="red"
+	}
+	
+
+   </script>
+</body>
+</html>

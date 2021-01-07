@@ -1,0 +1,24 @@
+<html>
+<head><title>Color Change</title>
+<script>
+
+function compute(f)
+{
+	if(confirm("Are you sure?"))
+		f.result.value=eval(f.expr.value)
+	else
+		alert("Please come back again.")
+}
+</script>
+</head>
+<body>
+   <form>
+	Enter an expression:
+	<INPUT TYPE="text" NAME="expr" size=15>
+	<INPUT TYPE="button" value="calculate" onClick="compute(this.form)">
+	<br>
+	Result:
+	<INPUT TYPE="text" NAME="result" size=15>
+   </form>
+</body>
+</html>

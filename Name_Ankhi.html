@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Print Name</title>
+<script type="text/javascript">
+	var name="Ankhi";
+	var name1="";
+	var i=0;
+	function printName()
+	{
+		if(i!=8)
+		{
+			name1=name1+" "+name;
+			i++;
+			document.getElementById("namediv").innerHTML=name1;
+			setTimeout("printName()",1000);
+		}
+	}
+</script>
+</head>
+<body bgcolor="gold" onLoad="printName()">
+	<div id="namediv" style="position:absolute;top:20%;left:20%;margin-top:-50x;margin-left:-50x;background-color:navy;color:white;border=6px solid DogerBlue;font-size:30px;">
+	</div>
+</body>
+</html> 

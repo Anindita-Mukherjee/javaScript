@@ -1,0 +1,115 @@
+<html>
+
+<head>
+    <title>Salary Calculator</title>
+    <style>
+        body {
+            color: aliceblue;
+            background-color: #333;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        
+        
+        input[type="text"] {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            width: 40%;
+            background-color: lightcoral;
+            color: darkred;
+            padding: 8px;
+            border: 1px solid darkred;
+            border-radius: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 25px;
+        }
+        
+        #display-change {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+        function calSal() {
+            var basicSal = Number(document.getElementById("basic-sal").value);
+            // console.log(basicSal);
+            var da = basicSal * 1.25;
+            var hra = basicSal * 0.3;
+            var pf = basicSal * 0.12;
+            var grossSal = basicSal + da + hra + pf;
+            var netSal = grossSal - pf;
+            document.getElementById("display-change").style.display = "inline";
+            document.getElementById("da").value = da;
+            document.getElementById("hra").value = hra;
+            document.getElementById("pf").value = pf;
+            document.getElementById("gs").value = grossSal;
+            document.getElementById("ns").value = netSal;
+        }
+
+        function reset() {
+            document.getElementById("display-change").style.display = "none";
+            document.getElementById("name").value = "";
+            document.getElementById("basic-sal").value = "";
+            document.getElementById("da").value = "";
+            document.getElementById("hra").value = "";
+            document.getElementById("pf").value = "";
+            document.getElementById("gs").value = "";
+            document.getElementById("ns").value = "";
+        }
+        
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        
+            Employee Name : 
+            <input type="text" name="name" id="name" placeholder="Enter your name">
+        
+        <br>
+        
+            Basic Salary : 
+            <input type="text" name="sal" id="basic-sal" placeholder="Enter basic salary">
+        
+        <br>
+        <div id="display-change">
+            
+                Dearness Allowance : 
+                <input type="text" name="da" id="da" readonly>
+            
+            <br>
+            
+                House Rent Allowance : 
+                <input type="text" name="hra" id="hra" readonly>
+            
+            <br>
+            
+                Provident Fund : 
+                <input type="text" name="pf" id="pf" readonly>
+            
+            <br>
+            
+                Gross Salary 
+                <input type="text" name="gs" id="gs" readonly>
+            
+            <br>
+            
+                Net Salary : 
+                <input type="text" name="ns" id="ns" readonly>
+            
+        </div>
+        <br>
+        <button onclick="calSal()">SUBMIT</button>
+        <button onclick="reset()">RESET</button>
+    </div>
+</body>
+
+</html>

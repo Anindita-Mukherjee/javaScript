@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Odd</title>
+    <script language="JavaScript">
+	limit = parseInt(document.getElementById("limit").value);
+        var p = 1;
+        function odd() {
+            if (p == 1) {
+                document.getElementById("box1").innerHTML = p + " ";
+                p++;
+		p++;
+                setTimeout("odd()", 1000);
+            }
+    
+            else {
+                
+                if (p <= limit) {
+                    d = document.getElementById("box1").innerHTML;
+                    document.getElementById("box1").innerHTML = d + p + " ";
+		    p++;
+		    p++;
+                    setTimeout("odd()", 1000);
+                }
+            
+        }
+    </script>
+    <style>
+        input {
+            padding: 20px 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>ODD NUmbers</h1><br>
+        LIMIT:<input type="text" id="limit" placeholder="Enter the limit "><br><br>
+        <input type="button" value="SUBMIT" onclick="odd()">
+    </center>
+    <div id="box1" style="font-size:18px;padding:20px 20px;margin:20px 20px; background-color:lightgreen; color:maroon;">
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Form Validation</title>
+<script type="text/javascript">
+
+// Form validation code will come here.
+function validate()
+{
+ if( document.myForm.Name.value == "" )
+ {
+ alert( "Please provide your name!" );
+ document.myForm.Name.focus() ;
+ return false;
+ }
+ if( document.myForm.Marks.value >=100 )
+ {
+ alert( "Obtained marks cannot exceed full marks!" );
+ document.myForm.EMail.focus() ;
+ return false;
+
+ }
+ 
+ return( true );
+}
+//-->
+</script>
+
+</script>
+</head>
+<body bgcolor="pink">
+<form name="myForm" onsubmit="return(validate());">
+<table cellspacing="2" cellpadding="2" border="1" bgcolor="blue">
+<tr>
+ <td align="right">Name</td>
+
+ <td><input type="text" name="Name" /></td>
+</tr>
+<tr>
+ <td align="right">Marks</td>
+ <td><input type="number" name="Marks" /></td>
+</tr>
+
+
+<tr>
+ <td align="right"></td>
+ <td><input type="submit" value="Submit" /></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+<head>
+  <script language="javascript" type="text/javascript">
+	function addition()
+	{
+		var a,b
+		a=parseInt(document.f1.n1.value);
+		b=parseInt(document.f1.n2.value)
+		f1.out.value=a+b
+	}
+	function subtraction()
+	{
+		var a,b
+		a=parseInt(document.f1.n1.value);
+		b=parseInt(document.f1.n2.value)
+		f1.out.value=a-b
+	}
+	function multiplication()
+	{
+		var a,b
+		a=parseInt(document.f1.n1.value);
+		b=parseInt(document.f1.n2.value)
+		f1.out.value=a*b
+	}
+	function division()
+	{
+		var a,b
+		a=parseInt(document.f1.n1.value);
+		b=parseInt(document.f1.n2.value)
+		f1.out.value=a/b
+	}
+  </script>
+</head>
+<style>
+	fieldset{
+		border-color:grey;
+		margin-left:200px;
+		margin-right:200px;
+		background-color:#87ceeb;
+		}
+</style>
+<body bgcolor="pink" align="center">
+<form name="f1" method="post">
+<fieldset>
+<legend><b>Calculator</b></legend>
+Enter first number:<input type="text" name="n1" value=""><br><br>
+Enter second number:<input type="text" name="n2" value=""><br><br>
+Output:<input type="text" name="out" value=""><br><br>
+<input type="button" name="add" onClick="addition()" value="+">
+<input type="button" name="sub" onClick="subtraction()" value="-">
+<input type="button" name="mult" onClick="multiplication()" value="*">
+<input type="button" name="div" onClick="division()" value="/">
+</fieldset>
+</form>
+</body>
+</html>

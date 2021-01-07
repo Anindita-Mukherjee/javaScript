@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    
+    <title>Fibonacci</title>
+    <script>
+        a = 1;
+        b = 1;
+        p = 0;
+        function fib() {
+            if (p == 0) {
+                document.getElementById("box1").innerHTML = a + " ";
+                p++;
+                setTimeout("fib()", 1000);
+            }
+            else if (p == 1) {
+                d = document.getElementById("box1").innerHTML;
+                document.getElementById("box1").innerHTML = d + b + " ";
+                p++;
+                setTimeout("fib()", 1000);
+            }
+            else {
+                limit = parseInt(document.getElementById("limit").value);
+                c = a + b;
+                a = b;
+                b = c;
+                if (c <= limit) {
+                    d = document.getElementById("box1").innerHTML;
+                    document.getElementById("box1").innerHTML = d + c + " ";
+                    setTimeout("fib()", 1000);
+                }
+            }
+        }
+    </script>
+    <style>
+        input {
+            padding: 20px 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body style="font-size:25px;" bgcolor="yellow">
+    <center><fieldset>
+        <h1>Fibonacci Series</h1><br>
+        LIMIT:<input type="text" id="limit" placeholder="Enter the limit "><br><br>
+        <input type="button" value="START" onclick="fib()">
+    </center></fieldset>
+    <div id="box1" style="font-size:18px;padding:20px 20px;margin:20px 20px; background-color:lightgreen; color:maroon;">
+    </div>
+</body>
+</html>

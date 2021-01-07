@@ -1,0 +1,95 @@
+<!--Q1. Write a JavaScript program to implement a simple calculator having 4 buttons +, -, *, / and having three text boxes with respective labels showing the 2 numbers and the result when a button is clicked.-->
+
+ <html>
+
+     <head>
+
+         <title>Calculator</title>
+
+         <script type="text/javascript">
+
+             function put(x){
+
+                 document.getElementById("expr").value+=x
+
+             }
+
+             function solve(){
+
+                 x=eval(document.getElementById("expr").value);
+
+                 document.getElementById("expr").value=x;
+
+             }
+
+             function clr(){
+
+                 document.getElementById("expr").value="";
+
+             }
+
+         </script>
+
+     </head>
+
+     <body>
+
+         <table border="3" width="20%" height="20%">
+
+             <tr>
+
+                 <td colspan="4"><input type="text" placeholder="result" id="expr"></td>
+
+             <tr>
+
+                 <td><input type="button" value="1" onclick="put('1')"/> </td>
+
+                 <td><input type="button" value="2" onclick="put('2')"/> </td>
+
+                 <td><input type="button" value="3" onclick="put('3')"/> </td>
+
+                 <td><input type="button" value="/" onclick="put('/')"/> </td>
+
+             </tr>
+
+             <tr>
+
+                 <td><input type="button" value="4" onclick="put('4')"/> </td>
+
+                 <td><input type="button" value="5" onclick="put('5')"/> </td>
+
+                 <td><input type="button" value="6" onclick="put('6')"/> </td>
+
+                 <td><input type="button" value="*" onclick="put('*')"/> </td>
+
+             </tr>
+
+             <tr>
+
+                 <td><input type="button" value="7" onclick="put('7')"/> </td>
+
+                 <td><input type="button" value="8" onclick="put('8')"/> </td>
+
+                 <td><input type="button" value="9" onclick="put('9')"/> </td>
+
+                 <td><input type="button" value="+" onclick="put('+')"/> </td>
+
+             </tr>
+
+             <tr>
+
+                 <td><input type="button" value="0" onclick="put('0')"/> </td>
+
+                 <td><input type="button" value="-" onclick="put('-')"/> </td>
+
+                 <td><input type="button" value="=" onclick="solve()"/> </td>
+
+                 <td><input type="button" value="C" onclick="clr()"/> </td>
+
+             </tr>
+
+         </table>
+
+     </body>
+
+ </html> 

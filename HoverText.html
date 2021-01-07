@@ -1,0 +1,27 @@
+<html>
+<head>
+<script language="javascript">
+function day()
+{
+	d=new Date()
+	document.write("Today is: "+d.getDay())
+}
+function call()
+{
+	document.write("<font size=30 color="red">HELLO</font> ")
+}
+</script>
+</head>
+<body bgcolor="pink" onMouseHover="call()">
+	<h1 id="id1">My heading</h1>
+	<button type="button" onClick="myf()" style="background-color:yellow;color:black;border:2px solid #f44336;" >Click me</button>
+	<script>
+		function myf()
+		{
+			document.getElementById("id1").style.color="red"
+			document.getElementById("id1").style.fontSize="40px"
+			document.getElementById("id1").style.fontFamily="forte"
+		}
+	</script>	
+</body>
+</html>

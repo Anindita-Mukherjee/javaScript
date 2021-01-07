@@ -1,0 +1,55 @@
+<html>
+<title>Test</title>
+<head></head>
+<style>
+	
+	fieldset{
+		border-color:grey;
+		margin-left:200px;
+		margin-right:200px;
+		background:linear-gradient(to right,white,cyan);
+		}
+</style>
+
+<body align="center" onload="time()" bgColor="yellow">
+  <form name="f" >
+	<fieldset>
+	  <legend>Temparature</legend>
+		<br>
+		Celsius:<input type="text" name="c"><br><br>
+		Fahrenheit:<input type="text" name="f"><br><br>
+		<button type="button" name="b" style="background-color:yellow;color=blue;border=20px solid #00ff00" onClick="calc()">Click me</button><br><br>
+		Result:<input type="text" name="r"><br><br>
+	</fieldset>
+   </form>
+
+   <h1 id="h" onMouseOver="hover()">HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</h1>
+   
+   <div id="clock" style="font-size:35px;color:#00aaff;text-shadow:2px 2px 2px blue;
+    border:3px groove blue;background-color:#aaffaa; width:195px; height:40px">
+   </div>
+
+   <script language="JavaScript">
+	var x
+	function calc(){
+		x=parseInt(document.f.c.value)
+		document.f.r.value=x*10
+	}
+	function hover(){
+		document.getElementById("h").style.fontSize="32"
+		document.getElementById("h").style.color="red"
+	}
+	function time()
+	{
+		var today=new Date()
+		var h=today.getHours()
+		var m=today.getMinutes()
+		var s=today.getSeconds()
+
+		document.getElementById('clock').innerHTML=h+":"+m+":"+s
+		t=setTimeout('time()', 500)
+	}
+
+   </script>
+</body>
+</html>
